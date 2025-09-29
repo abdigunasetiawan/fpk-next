@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import LenisProvider from "@/providers/LenisProvider";
+import { Analytics } from "@vercel/analytics/next";
 
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -39,6 +40,7 @@ export default function RootLayout({
       >
         <Navbar />
         <LenisProvider>{children}</LenisProvider>
+        <Analytics />
         <Footer />
       </body>
     </html>
