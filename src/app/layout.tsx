@@ -29,16 +29,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
-        <link
-          rel="stylesheet"
-          href="https://cdn.jsdelivr.net/gh/abdigunasetiawan/css-layout-helper/index.css"
-        />
-        <script
-          defer
-          src="https://cdn.jsdelivr.net/gh/abdigunasetiawan/css-layout-helper/index.js"
-        ></script>
-      </head>
+      <head></head>
       <body
         className={`${inter.variable} font-inter relative flex min-h-screen flex-col overflow-x-hidden antialiased`}
       >
