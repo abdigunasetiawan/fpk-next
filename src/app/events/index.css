@@ -1,0 +1,5 @@
+section#hero .jumbotron {
+  background-image: linear-gradient(to right, #ff7e3e, #f49d03);
+  background-image: none;
+  background-image: url("/assets/img/event.webp");
+}

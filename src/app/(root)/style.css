@@ -1,0 +1,269 @@
+/* Sections Styling */
+section#offers .swiper-pagination,
+section#events .swiper-pagination,
+section#projects .swiper-pagination,
+section#testimonials .swiper-pagination {
+  position: relative;
+  margin-top: 4px;
+  /* display: none; */
+}
+
+section#offers .swiper-pagination .swiper-pagination-bullet,
+section#events .swiper-pagination .swiper-pagination-bullet,
+section#projects .swiper-pagination .swiper-pagination-bullet,
+section#testimonials .swiper-pagination .swiper-pagination-bullet {
+  background-color: #d9d9d9;
+  opacity: 1;
+  width: 12px;
+  height: 12px;
+}
+
+section#offers .swiper-pagination .swiper-pagination-bullet-active,
+section#events .swiper-pagination .swiper-pagination-bullet-active,
+section#projects .swiper-pagination .swiper-pagination-bullet-active,
+section#testimonials .swiper-pagination .swiper-pagination-bullet-active {
+  background-color: #ff7e3e;
+}
+
+/* Mentors */
+section#mentors .wrapper {
+  background-image: linear-gradient(170deg, #ff7e3e 17%, #f49d03 100%);
+}
+
+section#mentors .swiper-pagination {
+  position: static !important;
+  width: max-content;
+  height: auto;
+  display: flex;
+  align-items: center;
+}
+
+section#mentors .swiper-pagination .swiper-pagination-bullet {
+  background-color: #d9d9d9;
+  width: 16px;
+  height: 16px;
+}
+
+section#mentors .swiper-pagination .swiper-pagination-bullet-active {
+  background-color: #fff;
+}
+
+/* Events & Projects Cards */
+section#events .card__event,
+section#projects .card__project {
+  position: relative;
+}
+
+section#events .card__event::after,
+section#projects .card__project::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 1), 30%, #ffffff00);
+  z-index: 5;
+}
+
+section#events .card__event:hover:after {
+  background-image: linear-gradient(
+    to bottom,
+    rgba(255, 126, 62, 0.5),
+    rgba(115, 56, 27, 0.8)
+  );
+}
+
+/* Testimonials */
+section#testimonials .card__testimonial {
+  position: relative;
+}
+
+section#testimonials .card__testimonial::before {
+  position: relative;
+  display: block;
+  content: url("/images/svg/testimonial-decor-2.svg");
+  top: -16px;
+  left: 32px;
+}
+
+/* Footer */
+section#footer footer {
+  background-image: url("/images/footer-bg.png");
+  background-size: cover;
+  position: relative;
+}
+
+/* Media Queries */
+@media screen and (min-width: 767px) {
+  section#mentors .mentor__description {
+    width: 448px !important;
+    margin-inline: auto;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  section#mentors .mentor__social-media {
+    background-image: linear-gradient(to bottom, #ff7e3e, #f49d03);
+    animation: showMentorsSocials 1000ms forwards ease-in-out;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  /* Hero Decorations */
+  section#hero .hero-heading {
+    position: relative;
+  }
+  section#hero .hero-heading::before {
+    display: block;
+    position: absolute;
+    content: url("/images/svg/hero-decor-1.svg");
+    top: -56px;
+    left: -28px;
+    z-index: -1;
+  }
+  section#hero .hero-heading::after {
+    display: block;
+    position: absolute;
+    content: url("/images/svg/hero-decor-2.svg");
+    bottom: -28px;
+    right: 0;
+    z-index: -1;
+  }
+
+  /* Other sections decorations */
+  section#company {
+    position: relative;
+  }
+  section#company::after {
+    position: absolute;
+    display: block;
+    content: url("/images/svg/programs-decor-2.svg");
+    left: 64px;
+  }
+  section#programs .programs-heading {
+    position: relative;
+  }
+  section#programs .programs-heading::before {
+    position: absolute;
+    display: block;
+    content: url("/images/svg/programs-decor-1.svg");
+    right: 38px;
+    top: -22px;
+  }
+  section#offers .offers-heading {
+    position: relative;
+  }
+  section#offers .offers-heading::before {
+    position: absolute;
+    display: block;
+    content: url("/images/svg/offers-decor-1.svg");
+    top: -32px;
+    left: 128px;
+  }
+  section#offers .container .text-wrapper {
+    position: relative;
+  }
+  section#offers .container .text-wrapper::after {
+    position: absolute;
+    display: block;
+    content: url("/images/svg/offers-decor-2.svg");
+    top: 50px;
+    right: 84px;
+  }
+  section#mentors .wrapper {
+    position: relative;
+  }
+  section#mentors .wrapper::before {
+    position: absolute;
+    display: block;
+    content: url("/images/svg/mentor-decor-2-cropped.svg");
+    left: 0;
+    bottom: -10px;
+    z-index: 999;
+  }
+  section#mentors .wrapper::after {
+    position: absolute;
+    display: block;
+    content: url("/images/svg/mentor-decor-1.svg");
+    right: 38px;
+    top: 0;
+    z-index: 9999;
+  }
+  section#events .events-heading {
+    position: relative;
+  }
+  section#events .events-heading::after {
+    content: url("/images/svg/event-decor-1.svg");
+    display: block;
+    position: absolute;
+    top: -20px;
+    left: 270px;
+  }
+  section#projects .projects-heading {
+    position: relative;
+  }
+  section#projects .projects-heading::after {
+    content: url("/images/svg/projects-decor-1.svg");
+    display: block;
+    position: absolute;
+    top: -20px;
+    left: 246px;
+  }
+  section#projects .container {
+    position: relative;
+  }
+  section#projects .container::after {
+    position: absolute;
+    display: block;
+    content: url("/images/svg/projects-decor-2.svg");
+    top: 50px;
+    right: 64px;
+  }
+  section#testimonials .text-wrapper {
+    position: relative;
+  }
+  section#testimonials .text-wrapper::before {
+    position: absolute;
+    display: block;
+    content: url("/images/svg/testimonial-decor-1.svg");
+    top: 90px;
+    left: -200px;
+  }
+  section#testimonials .text-wrapper::after {
+    position: absolute;
+    display: block;
+    content: url("/images/svg/testimonial-decor-1.svg");
+    top: 90px;
+    right: -200px;
+  }
+}
+
+@keyframes showMentorsSocials {
+  from {
+    transform: translateY(-100px) scale(75%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0) scale(75%);
+    opacity: 1;
+  }
+}
+
+/* ===== PERBAIKAN SPACING UNTUK SWIPER EVENTS ===== */
+section#events .swiper-wrapper {
+  padding-block: 28px;
+}
+
+/* ===== PERBAIKAN SPACING UNTUK SWIPER PROJECTS ===== */
+.swiper--projects .swiper-wrapper {
+  margin-top: 32px;
+  padding-bottom: 24px;
+}
+
+/* ===== PERBAIKAN SPACING UNTUK SWIPER TESTIMONIALS (TAMBAHKAN INI) ===== */
+.swiper--testimonials .swiper-wrapper {
+  padding-top: 28px;
+  padding-bottom: 24px;
+}
