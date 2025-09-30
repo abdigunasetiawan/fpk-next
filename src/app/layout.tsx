@@ -26,6 +26,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/gh/abdigunasetiawan/css-layout-helper/index.css"
+        />
+        <script
+          src="https://cdn.jsdelivr.net/gh/abdigunasetiawan/css-layout-helper/index.js"
+          defer
+        ></script>
         <meta
           name="google-site-verification"
           content="lp0j-kJDrPDEHKehxKcbNIPWXLkVJUyU4bSLHDrUOCw"

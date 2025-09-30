@@ -59,49 +59,16 @@ const Hero = () => {
           </div>
         </div>
         <div className="mt-9 lg:mt-auto">
-          {/* <Image
-            rel="preload"
-            className="mx-auto h-auto max-w-[252px] lg:max-w-[350px] xl:max-w-[400px]"
-            src="/images/hero.png"
-            alt="Hero section"
-            draggable="false"
-            width={400}
-            height={400}
-            sizes="(max-width: 1024px) 252px, (max-width: 1280px) 350px, 400px"
-          /> */}
-
           <Image
-            className="mx-auto h-auto w-full max-w-[252px] lg:max-w-[350px] xl:max-w-[400px]"
+            className="mx-auto h-auto w-[252px] lg:w-[400px] xl:w-[500px]"
             src="/images/hero.png"
-            alt="Hero section"
+            alt="Hero Image"
             draggable="false"
-            width={400}
-            height={400}
-            sizes="(max-width: 1024px) 252px, (max-width: 1280px) 350px, 400px"
+            width={680}
+            height={558}
+            sizes="(max-width: 1024px) 400px, (max-width: 1280px) 680px, 400px"
             priority
           />
-
-          {/* <Image
-            rel="preload"
-            // w-full max-w-[252px] lg:max-w-[350px] xl:max-w-[400px]
-            className="mx-auto h-auto"
-            src="/images/hero.png"
-            alt="Hero section"
-            draggable="false"
-            width={400}
-            height={400}
-            // sizes="(max-width: 1024px) 252px, (max-width: 1280px) 350px, 400px"
-          /> */}
-          {/* <Image
-            src="/images/hero.png"
-            alt="Hero section"
-            rel="preload"
-            draggable="false"
-            width={400}
-            height={400}
-            className="mx-auto h-auto w-[252px] lg:w-[350px] xl:w-[400px]"
-            sizes="(max-width: 1024px) 252px, (max-width: 1280px) 350px, 400px"
-          /> */}
         </div>
       </div>
     </section>
