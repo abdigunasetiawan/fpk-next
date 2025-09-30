@@ -58,19 +58,8 @@ const Navbar = () => {
           <span className="text-2xl font-bold">FPK</span>
         </Link>
 
-        {/* <button className="rounded-sm p-1.5 hover:bg-neutral-400">
-          <div
-            className={`z-[9999] flex h-5 w-[25px] cursor-pointer flex-col justify-between lg:hidden ${isMenuOpen ? "active" : ""}`}
-            id="hamburger-toggle"
-            onClick={toggleMenu}
-          >
-            <span className="hamburger__line origin-top-left" />
-            <span className="hamburger__line" />
-            <span className="hamburger__line origin-bottom-left" />
-          </div>
-        </button> */}
-
         <button
+          aria-label="Hamburger Menu Toggle"
           onClick={toggleMenu}
           className="rounded-sm border-[3px] border-transparent p-1 hover:bg-neutral-200 focus:border-neutral-200 lg:hidden"
         >
