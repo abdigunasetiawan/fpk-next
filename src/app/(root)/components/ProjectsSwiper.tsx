@@ -36,6 +36,7 @@ const ProjectsSwiper = () => {
       }}
     >
       <button
+        aria-label="Previous Slide"
         id="swiper--projects__navigator--prev"
         className="group absolute top-1/2 left-2 z-20 hidden -translate-y-1/2 cursor-pointer transition-transform duration-100 active:scale-90 md:block"
       >
@@ -73,6 +74,7 @@ const ProjectsSwiper = () => {
       <div className="swiper-pagination-projects swiper-pagination" />
 
       <button
+        aria-label="Next Slide"
         id="swiper--projects__navigator--next"
         className="group absolute top-1/2 right-2 z-20 hidden -translate-y-1/2 cursor-pointer transition-transform duration-100 active:scale-90 md:block"
       >

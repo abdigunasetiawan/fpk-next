@@ -37,6 +37,7 @@ const EventsSwiper = () => {
       }}
     >
       <button
+        aria-label="Previous Slide"
         id="swiper--events__navigator--prev"
         className="group absolute top-1/2 left-2 z-20 -translate-y-1/2 cursor-pointer transition-transform duration-100 active:scale-90"
       >
@@ -75,6 +76,7 @@ const EventsSwiper = () => {
       <div className="swiper-pagination-events swiper-pagination" />
 
       <button
+        aria-label="Next Slide"
         id="swiper--events__navigator--next"
         className="group absolute top-1/2 right-2 z-20 -translate-y-1/2 cursor-pointer transition-transform duration-100 active:scale-90"
       >

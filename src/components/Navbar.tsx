@@ -98,19 +98,20 @@ const Navbar = () => {
           className="absolute top-14 left-0 box-border flex w-full flex-col items-center gap-y-4 px-4 py-4 transition-transform duration-200 lg:static lg:w-max lg:translate-y-0 lg:flex-row lg:items-center lg:gap-8 lg:p-0"
         >
           {routes.map((route) => (
-            <Link
-              key={route.href}
-              href={route.href}
-              onClick={() => setIsMenuOpen(false)}
-              className={cn(
-                "block text-lg transition duration-100 lg:text-base",
-                route.active
-                  ? "font-bold text-[#F49D03]"
-                  : "font-medium text-black/60 hover:text-black",
-              )}
-            >
-              {route.label}
-            </Link>
+            <li key={route.href}>
+              <Link
+                href={route.href}
+                onClick={() => setIsMenuOpen(false)}
+                className={cn(
+                  "block text-lg transition duration-100 lg:text-base",
+                  route.active
+                    ? "font-bold text-[#F49D03]"
+                    : "font-medium text-black/60 hover:text-black",
+                )}
+              >
+                {route.label}
+              </Link>
+            </li>
           ))}
 
           <li className="ml-auto w-full lg:ml-4 lg:w-auto">

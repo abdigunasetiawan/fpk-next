@@ -14,6 +14,7 @@ const SwiperControlButton: React.FC<SwiperControlButtonProps> = ({
       onClick={() =>
         direction === "next" ? swiper.slideNext() : swiper.slidePrev()
       }
+      aria-label={direction === "next" ? "Next Slide" : "Previous Slide"}
     >
       <svg
         className="group w-12 cursor-pointer transition-all duration-100 active:scale-90"

@@ -177,6 +177,7 @@ const Footer = () => {
             </p>
             <div className="flex gap-4">
               <a
+                aria-label="Instagram Forum Programmer Kaputama"
                 href="https://www.instagram.com/ukm.fpk/"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -214,6 +215,7 @@ const Footer = () => {
                 </svg>
               </a>
               <a
+                aria-label="Github Forum Programmer Kaputama"
                 href="https://github.com/FPK-Project"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -242,6 +244,7 @@ const Footer = () => {
                 </svg>
               </a>
               <a
+                aria-label="Discord Forum Programmer Kaputama"
                 href="https://discord.gg/Zehx8pAEUg"
                 target="_blank"
                 rel="noopener noreferrer"
