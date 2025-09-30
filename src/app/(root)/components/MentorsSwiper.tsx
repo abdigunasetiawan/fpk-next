@@ -63,6 +63,7 @@ const MentorsSwiper: React.FC<MentorsSwiperProps> = ({ data }) => {
               />
 
               <a
+                aria-label="Instagram Mentor"
                 href={mentor.socials[0].url}
                 className="mentor__social-media absolute top-10 left-2 z-20 hidden w-max scale-75 cursor-pointer items-center gap-4 rounded-lg px-2.5 py-2 shadow-md lg:flex"
                 target="_blank"
@@ -70,13 +71,14 @@ const MentorsSwiper: React.FC<MentorsSwiperProps> = ({ data }) => {
               >
                 <IconInstagram id={mentor.id} />
                 <div className="text-white">
-                  <h6 className="text-sm font-semibold">
+                  <p className="text-sm font-semibold">
                     {mentor.socials[0].platform}
-                  </h6>
+                  </p>
                   <p className="text-xs">{mentor.socials[0].user}</p>
                 </div>
               </a>
               <a
+                aria-label="Github Mentor"
                 href={mentor.socials[1].url}
                 className="mentor__social-media absolute top-1/2 right-2 z-20 hidden w-max -translate-y-1/2 scale-75 cursor-pointer items-center gap-4 rounded-lg px-2.5 py-2 shadow-md lg:flex"
                 target="_blank"
@@ -84,13 +86,14 @@ const MentorsSwiper: React.FC<MentorsSwiperProps> = ({ data }) => {
               >
                 <IconGithub />
                 <div className="text-white">
-                  <h6 className="text-sm font-semibold">
+                  <p className="text-sm font-semibold">
                     {mentor.socials[1].platform}
-                  </h6>
+                  </p>
                   <p className="text-xs">{mentor.socials[1].user}</p>
                 </div>
               </a>
               <a
+                aria-label="Linkedin Mentor"
                 href={mentor.socials[2].url}
                 className="mentor__social-media absolute bottom-8 left-2 z-20 hidden w-max scale-75 cursor-pointer items-center gap-4 rounded-lg px-2.5 py-2 shadow-md lg:flex"
                 target="_blank"
@@ -98,9 +101,9 @@ const MentorsSwiper: React.FC<MentorsSwiperProps> = ({ data }) => {
               >
                 <IconLinkedin />
                 <div className="text-white">
-                  <h6 className="text-sm font-semibold">
+                  <p className="text-sm font-semibold">
                     {mentor.socials[2].platform}
-                  </h6>
+                  </p>
                   <p className="text-xs">{mentor.socials[2].user}</p>
                 </div>
               </a>
@@ -117,6 +120,7 @@ const MentorsSwiper: React.FC<MentorsSwiperProps> = ({ data }) => {
               </div>
               <div className="mt-4 flex items-center justify-center gap-3 lg:hidden">
                 <a
+                  aria-label="Instagram Mentor"
                   href={mentor.socials[0].url}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -124,6 +128,7 @@ const MentorsSwiper: React.FC<MentorsSwiperProps> = ({ data }) => {
                   <IconInstagram id={mentor.id} />
                 </a>
                 <a
+                  aria-label="Github Mentor"
                   href={mentor.socials[1].url}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -131,6 +136,7 @@ const MentorsSwiper: React.FC<MentorsSwiperProps> = ({ data }) => {
                   <IconGithub />
                 </a>
                 <a
+                  aria-label="Linkedin Mentor"
                   href={mentor.socials[2].url}
                   target="_blank"
                   rel="noopener noreferrer"

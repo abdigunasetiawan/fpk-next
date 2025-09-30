@@ -71,7 +71,6 @@ const Hero = () => {
           /> */}
 
           <Image
-            rel="preload"
             className="mx-auto h-auto w-full max-w-[252px] lg:max-w-[350px] xl:max-w-[400px]"
             src="/images/hero.png"
             alt="Hero section"
@@ -79,6 +78,7 @@ const Hero = () => {
             width={400}
             height={400}
             sizes="(max-width: 1024px) 252px, (max-width: 1280px) 350px, 400px"
+            priority
           />
 
           {/* <Image

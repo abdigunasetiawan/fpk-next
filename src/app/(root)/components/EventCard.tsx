@@ -30,7 +30,7 @@ const EventCard: React.FC<EventCardProps> = ({
         <p className="max-w-max rounded-lg bg-[#D9D9D990] px-2 py-1 text-xs text-white uppercase">
           {type}
         </p>
-        <h4 className="mt-4 font-bold text-white">{title}</h4>
+        <p className="mt-4 font-bold text-white">{title}</p>
         <p className="mt-1 text-sm text-balance text-white">{description}</p>
       </div>
     </a>

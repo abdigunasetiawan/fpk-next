@@ -28,7 +28,7 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
           />
         </div>
         <div className="">
-          <h4 className="font-semibold text-[#FF7E3E]">{name}</h4>
+          <p className="font-semibold text-[#FF7E3E]">{name}</p>
           <p className="text-sm text-[#000000]/70">{role}</p>
         </div>
       </div>

@@ -76,7 +76,7 @@ const Footer = () => {
                   />
                 </svg>
                 <div className="max-w-sm">
-                  <h5 className="font-semibold">FPK HQ</h5>
+                  <p className="font-semibold">FPK HQ</p>
                   <p>
                     Jl. Veteran No.4A, Tangsi, Kec. Binjai Kota, Kota Binjai,
                     Sumatera Utara 20714
