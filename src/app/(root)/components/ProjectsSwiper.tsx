@@ -31,7 +31,6 @@ const ProjectsSwiper = () => {
       breakpoints={{
         768: {
           slidesPerView: 2,
-          spaceBetween: 32,
         },
       }}
     >

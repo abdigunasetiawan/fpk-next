@@ -12,7 +12,7 @@ const ProjectsSwiperWrapper = () => {
       <button
         aria-label="Previous Slide"
         id="swiper--projects__navigator--prev"
-        className="group absolute top-1/2 -left-2 z-20 -translate-y-1/2 cursor-pointer transition-transform duration-100 active:scale-90 md:block lg:-left-6"
+        className="group absolute top-1/2 -left-2 z-20 hidden -translate-y-1/2 cursor-pointer transition-transform duration-100 active:scale-90 md:-left-6 md:block"
       >
         <svg
           className="drop-shadow-lg"
@@ -23,14 +23,14 @@ const ProjectsSwiperWrapper = () => {
           viewBox="0 0 48 48"
         >
           <rect
-            className="fill-[#DCDCDC] transition-colors duration-100 group-hover:fill-[#FF7E3E]"
+            className="fill-[#DCDCDC] transition-colors duration-100 group-hover:fill-[#FF7E3E] group-active:fill-[#FF7E3E]"
             width={48}
             height={48}
             rx={24}
             transform="matrix(1 0 0 -1 0 48)"
           />
           <path
-            className="stroke-[#989696] transition-colors duration-100 group-hover:stroke-[#fff]"
+            className="stroke-[#989696] transition-colors duration-100 group-hover:stroke-[#fff] group-active:stroke-[#fff]"
             strokeLinecap="round"
             strokeLinejoin="round"
             strokeWidth={4}
@@ -44,7 +44,7 @@ const ProjectsSwiperWrapper = () => {
       <button
         aria-label="Next Slide"
         id="swiper--projects__navigator--next"
-        className="group absolute top-1/2 -right-2 z-20 -translate-y-1/2 cursor-pointer transition-transform duration-100 active:scale-90 md:block lg:-right-6"
+        className="group absolute top-1/2 -right-2 z-20 hidden -translate-y-1/2 cursor-pointer transition-transform duration-100 active:scale-90 md:-right-6 md:block"
       >
         <svg
           className="drop-shadow-lg"
@@ -55,14 +55,14 @@ const ProjectsSwiperWrapper = () => {
           viewBox="0 0 48 48"
         >
           <rect
-            className="fill-[#DCDCDC] transition-colors duration-100 group-hover:fill-[#FF7E3E]"
+            className="fill-[#DCDCDC] transition-colors duration-100 group-hover:fill-[#FF7E3E] group-active:fill-[#FF7E3E]"
             width={48}
             height={48}
             rx={24}
             transform="matrix(-1 0 0 1 48 0)"
           />
           <path
-            className="stroke-[#989696] transition-colors duration-100 group-hover:stroke-[#fff]"
+            className="stroke-[#989696] transition-colors duration-100 group-hover:stroke-[#fff] group-active:stroke-[#fff]"
             strokeLinecap="round"
             strokeLinejoin="round"
             strokeWidth={4}

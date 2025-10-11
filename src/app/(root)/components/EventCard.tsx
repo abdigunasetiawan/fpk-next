@@ -16,7 +16,7 @@ const EventCard: React.FC<EventCardProps> = ({
   return (
     <a
       href="#"
-      className="card__event group relative mx-auto block aspect-[2/3] w-[calc(100%-32px)] overflow-hidden rounded-lg shadow-xl lg:w-full xl:w-full"
+      className="card__event group relative mx-auto block aspect-[2/3] w-[calc(100%-32px)] overflow-hidden rounded-lg shadow-xl md:w-full"
     >
       <Image
         width={300}
@@ -37,7 +37,7 @@ const EventCard: React.FC<EventCardProps> = ({
         <div className="flex items-end gap-x-2">
           <p className="mt-1 text-sm text-balance text-white">{description}</p>
           <svg
-            className="shrink-0"
+            className="h-6 w-6 shrink-0 md:h-11 md:w-11"
             xmlns="http://www.w3.org/2000/svg"
             width={44}
             height={44}
