@@ -1,4 +1,4 @@
-import EventsSwiper from "./EventsSwiper";
+import EventsWrapper from "./EventsSwiperWrapper";
 import SectionsButtonNavigator from "./SectionsButtonNavigator";
 
 const Events = () => {
@@ -22,7 +22,7 @@ const Events = () => {
           <SectionsButtonNavigator href="/events" isMobile={false} />
         </div>
 
-        <EventsSwiper />
+        <EventsWrapper />
 
         <SectionsButtonNavigator href="/events" isMobile={true} />
       </div>

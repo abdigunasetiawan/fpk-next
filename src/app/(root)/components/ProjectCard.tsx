@@ -19,7 +19,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
       href={url}
       target="_blank"
       rel="noopener noreferrer"
-      className="card__project group relative mx-auto block aspect-video w-full overflow-hidden rounded-lg shadow-md"
+      className="card__project group relative mx-auto block aspect-video w-[calc(100%-32px)] overflow-hidden rounded-lg shadow-md"
     >
       <Image
         width={680}

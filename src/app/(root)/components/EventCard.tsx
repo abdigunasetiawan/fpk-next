@@ -16,7 +16,7 @@ const EventCard: React.FC<EventCardProps> = ({
   return (
     <a
       href="#"
-      className="card__event group relative mx-auto block aspect-[2/3] w-[256px] overflow-hidden rounded-lg shadow-xl xl:w-full"
+      className="card__event group relative mx-auto block aspect-[2/3] w-[calc(100%-32px)] overflow-hidden rounded-lg shadow-xl lg:w-full xl:w-full"
     >
       <Image
         width={300}

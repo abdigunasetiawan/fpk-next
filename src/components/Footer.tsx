@@ -129,7 +129,7 @@ const Footer = () => {
               </div>
             </div>
             <div className="">
-              <h4 className="text-lg font-bold">FPK</h4>
+              <p className="text-lg font-bold">FPK</p>
               <ul className="mt-2 flex flex-col gap-1">
                 <li>
                   <Link href="/about">Tentang Kami</Link>
@@ -143,7 +143,7 @@ const Footer = () => {
               </ul>
             </div>
             <div className="">
-              <h4 className="text-lg font-bold">Services</h4>
+              <p className="text-lg font-bold">Services</p>
               <ul className="mt-2 flex flex-col gap-1">
                 <li>
                   <a href="#">Front End</a>
@@ -157,7 +157,7 @@ const Footer = () => {
               </ul>
             </div>
             <div className="">
-              <h4 className="text-lg font-bold">Bantuan dan Panduan</h4>
+              <p className="text-lg font-bold">Bantuan dan Panduan</p>
               <ul className="mt-2 flex flex-col gap-1">
                 <li>
                   <a href="#">Syarat dan Ketentuan</a>
