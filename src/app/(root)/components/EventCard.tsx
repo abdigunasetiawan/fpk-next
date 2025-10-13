@@ -29,8 +29,8 @@ const EventCard: React.FC<EventCardProps> = ({
       {showSkeleton && <Skeleton height="100%" width="100%"></Skeleton>}
 
       <Image
-        width={300}
-        height={450}
+        width={500}
+        height={650}
         loading="lazy"
         className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-110"
         src={img_path}

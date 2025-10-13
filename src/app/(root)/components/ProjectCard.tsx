@@ -12,7 +12,7 @@ interface ProjectCardProps {
 }
 
 const ProjectCard: React.FC<ProjectCardProps> = ({
-  project: { url, type, img_path, title },
+  project: { url, type, img_path, title, description },
 }) => {
   return (
     <a
@@ -34,7 +34,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
           {type}
         </p>
         <p className="mt-4 font-bold text-white">{title}</p>
-        {/* <p className="mt-1 text-sm text-white">{description}</p> */}
+        <p className="mt-1 hidden text-sm text-white lg:block">{description}</p>
       </div>
     </a>
   );
