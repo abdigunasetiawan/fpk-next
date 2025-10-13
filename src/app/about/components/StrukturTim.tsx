@@ -34,25 +34,25 @@ const teamsData = {
   mainTeam: [
     {
       id: 1,
-      name: "Riski Firmansyah Manik",
+      name: "Risky Firmansyah Manik",
       role: "Ketua",
-      imageUrl: "/images/profile/riski-firmansyah-manik.jpg",
+      imageUrl: "/images/profile/Risky-firmansyah-manik.jpg",
       socials: {
         instagram: {
-          label: "Riski Firmansyah Manik",
-          url: "https:instagram.com",
+          label: "Risky Firmansyah Manik",
+          url: "https://www.instagram.com/riskymanik__/",
         },
         github: {
-          label: "Riski Firmansyah Manik",
-          url: "https:github.com",
+          label: "Risky Firmansyah Manik",
+          url: "https://github.com/RiskyManik/",
         },
         linkedIn: {
-          label: "Riski Firmansyah Manik",
-          url: "https:linkedin.com",
+          label: "Risky Firmansyah Manik",
+          url: "https://www.linkedin.com/in/risky-manik-845084296/",
         },
         portfolio: {
-          label: "Riski Dev",
-          url: "https:portfolio.com",
+          label: "Risky Dev",
+          url: "https://risky-dev.vercel.app/",
         },
       },
     },
@@ -64,19 +64,19 @@ const teamsData = {
       socials: {
         instagram: {
           label: "Abdi Guna Setiawan",
-          url: "https:instagram.com",
+          url: "https://www.instagram.com/abdigunasetiawan/",
         },
         github: {
           label: "Abdi Guna Setiawan",
-          url: "https:github.com",
+          url: "https://github.com/abdigunasetiawan",
         },
         linkedIn: {
           label: "Abdi Guna Setiawan",
-          url: "https:linkedin.com",
+          url: "https://www.linkedin.com/in/abdigunasetiawan/",
         },
         portfolio: {
           label: "Abdi Dev",
-          url: "https:portfolio.com",
+          url: "https://abdi-dev.vercel.app/",
         },
       },
     },
@@ -88,19 +88,19 @@ const teamsData = {
       socials: {
         instagram: {
           label: "Ade Aulia Dharma",
-          url: "https:instagram.com",
+          url: "https://www.instagram.com/adeauliadharma/",
         },
         github: {
           label: "Ade Aulia Dharma",
-          url: "https:github.com",
+          url: "https://github.com",
         },
         linkedIn: {
           label: "Ade Aulia Dharma",
-          url: "https:linkedin.com",
+          url: "https://www.linkedin.com/in/ade-aulia-dharma/",
         },
         portfolio: {
           label: "Ade Aulia Dharma",
-          url: "https:portfolio.com",
+          url: "https://portfolio.com",
         },
       },
     },
@@ -112,19 +112,19 @@ const teamsData = {
       socials: {
         instagram: {
           label: "Nazwa Intan Sari",
-          url: "https:instagram.com",
+          url: "https://www.instagram.com/nzwntnsr/",
         },
         github: {
           label: "Nazwa Intan Sari",
-          url: "https:github.com",
+          url: "https://github.com",
         },
         linkedIn: {
           label: "Nazwa Intan Sari",
-          url: "https:linkedin.com",
+          url: "https://www.linkedin.com/in/nazwa-intan-sari-b76055361/",
         },
         portfolio: {
           label: "Nazwa Intan Sari",
-          url: "https:portfolio.com",
+          url: "https://portfolio.com",
         },
       },
     },
@@ -136,19 +136,19 @@ const teamsData = {
       socials: {
         instagram: {
           label: "Reyva Ryo Al Hafiz",
-          url: "https:instagram.com",
+          url: "https://www.instagram.com/reyva_ryo/",
         },
         github: {
           label: "Reyva Ryo Al Hafiz",
-          url: "https:github.com",
+          url: "https://github.com",
         },
         linkedIn: {
           label: "Reyva Ryo Al Hafiz",
-          url: "https:linkedin.com",
+          url: "https://linkedin.com",
         },
         portfolio: {
           label: "Reyva Ryo Al Hafiz",
-          url: "https:portfolio.com",
+          url: "https://portfolio.com",
         },
       },
     },
@@ -160,19 +160,19 @@ const teamsData = {
       socials: {
         instagram: {
           label: "Citra Pratiwi",
-          url: "https:instagram.com",
+          url: "https://www.instagram.com/citrpr__/",
         },
         github: {
           label: "Citra Pratiwi",
-          url: "https:github.com",
+          url: "https://github.com/citrapratiwi4",
         },
         linkedIn: {
           label: "Citra Pratiwi",
-          url: "https:linkedin.com",
+          url: "https://www.linkedin.com/in/citrpr/",
         },
         portfolio: {
           label: "Citra Pratiwi",
-          url: "https:portfolio.com",
+          url: "https://portfolio.com",
         },
       },
     },
@@ -186,19 +186,19 @@ const teamsData = {
       socials: {
         instagram: {
           label: "Mhd. Jeffry Fadhil",
-          url: "https:instagram.com",
+          url: "https://www.instagram.com/mhd_jeffry05/",
         },
         github: {
           label: "Mhd. Jeffry Fadhil",
-          url: "https:github.com",
+          url: "https://github.com",
         },
         linkedIn: {
           label: "Mhd. Jeffry Fadhil",
-          url: "https:linkedin.com",
+          url: "https://linkedin.com",
         },
         portfolio: {
           label: "Mhd. Jeffry Fadhil",
-          url: "https:portfolio.com",
+          url: "https://portfolio.com",
         },
       },
     },
@@ -210,19 +210,19 @@ const teamsData = {
       socials: {
         instagram: {
           label: "Audi Putri Sadiwa",
-          url: "https:instagram.com",
+          url: "https://instagram.com",
         },
         github: {
           label: "Audi Putri Sadiwa",
-          url: "https:github.com",
+          url: "https://github.com",
         },
         linkedIn: {
           label: "Audi Putri Sadiwa",
-          url: "https:linkedin.com",
+          url: "https://linkedin.com",
         },
         portfolio: {
           label: "Audi Putri Sadiwa",
-          url: "https:portfolio.com",
+          url: "https://portfolio.com",
         },
       },
     },
@@ -234,19 +234,19 @@ const teamsData = {
       socials: {
         instagram: {
           label: "Farhan Ahmad",
-          url: "https:instagram.com",
+          url: "https://www.instagram.com/nerf_fansa/",
         },
         github: {
           label: "Farhan Ahmad",
-          url: "https:github.com",
+          url: "https://github.com",
         },
         linkedIn: {
           label: "Farhan Ahmad",
-          url: "https:linkedin.com",
+          url: "https://linkedin.com",
         },
         portfolio: {
           label: "Farhan Ahmad",
-          url: "https:portfolio.com",
+          url: "https://portfolio.com",
         },
       },
     },
@@ -258,19 +258,19 @@ const teamsData = {
       socials: {
         instagram: {
           label: "Muhammad Gifary",
-          url: "https:instagram.com",
+          url: "https://www.instagram.com/gif_ry02/",
         },
         github: {
           label: "Muhammad Gifary",
-          url: "https:github.com",
+          url: "https://github.com",
         },
         linkedIn: {
           label: "Muhammad Gifary",
-          url: "https:linkedin.com",
+          url: "https://linkedin.com",
         },
         portfolio: {
           label: "Muhammad Gifary",
-          url: "https:portfolio.com",
+          url: "https://portofolio-gifary.vercel.app/",
         },
       },
     },
@@ -282,19 +282,19 @@ const teamsData = {
       socials: {
         instagram: {
           label: "Syarifa Ade Mastura",
-          url: "https:instagram.com",
+          url: "https://instagram.com",
         },
         github: {
           label: "Syarifa Ade Mastura",
-          url: "https:github.com",
+          url: "https://github.com",
         },
         linkedIn: {
           label: "Syarifa Ade Mastura",
-          url: "https:linkedin.com",
+          url: "https://linkedin.com",
         },
         portfolio: {
           label: "Syarifa Ade Mastura",
-          url: "https:portfolio.com",
+          url: "https://portfolio.com",
         },
       },
     },
@@ -306,19 +306,19 @@ const teamsData = {
       socials: {
         instagram: {
           label: "Mutia Zahra Nasution",
-          url: "https:instagram.com",
+          url: "https://www.instagram.com/zahraa__2508/",
         },
         github: {
           label: "Mutia Zahra Nasution",
-          url: "https:github.com",
+          url: "https://github.com",
         },
         linkedIn: {
           label: "Mutia Zahra Nasution",
-          url: "https:linkedin.com",
+          url: "https://linkedin.com",
         },
         portfolio: {
           label: "Mutia Zahra Nasution",
-          url: "https:portfolio.com",
+          url: "https://portfolio.com",
         },
       },
     },
@@ -330,19 +330,19 @@ const teamsData = {
       socials: {
         instagram: {
           label: "Novenda Sitepu",
-          url: "https:instagram.com",
+          url: "https://www.instagram.com/vendaastp_/",
         },
         github: {
           label: "Novenda Sitepu",
-          url: "https:github.com",
+          url: "https://github.com",
         },
         linkedIn: {
           label: "Novenda Sitepu",
-          url: "https:linkedin.com",
+          url: "https://linkedin.com",
         },
         portfolio: {
           label: "Novenda Sitepu",
-          url: "https:portfolio.com",
+          url: "https://portfolio.com",
         },
       },
     },
@@ -354,19 +354,19 @@ const teamsData = {
       socials: {
         instagram: {
           label: "Regiba Fihi",
-          url: "https:instagram.com",
+          url: "https://www.instagram.com/regibaadamsyah/",
         },
         github: {
           label: "Regiba Fihi",
-          url: "https:github.com",
+          url: "https://github.com",
         },
         linkedIn: {
           label: "Regiba Fihi",
-          url: "https:linkedin.com",
+          url: "https://linkedin.com",
         },
         portfolio: {
           label: "Regiba Fihi",
-          url: "https:portfolio.com",
+          url: "https://portfolio.com",
         },
       },
     },

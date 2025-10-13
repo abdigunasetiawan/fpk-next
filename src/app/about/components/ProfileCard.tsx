@@ -85,6 +85,7 @@ const ProfileCard: React.FC<ProfileCardProps> = ({
                 <Link
                   key={key}
                   href={social.url}
+                  // href="https://github.com/FPK-Project"
                   target="_blank"
                   className="flex items-center gap-1 rounded-lg bg-slate-100 p-1 text-sm hover:underline"
                 >
