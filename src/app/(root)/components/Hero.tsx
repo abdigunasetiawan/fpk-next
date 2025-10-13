@@ -67,7 +67,7 @@ const Hero = () => {
             width={680}
             height={558}
             sizes="(max-width: 1024px) 400px, (max-width: 1280px) 680px, 400px"
-            priority
+            priority={true}
           />
         </div>
       </div>

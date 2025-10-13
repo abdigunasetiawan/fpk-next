@@ -1,34 +1,34 @@
 import Marquee from "react-fast-marquee";
 import ProfileCard from "./ProfileCard";
 
-const TeamStructureDecoration = () => (
-  <svg
-    className="absolute top-1/2 hidden w-[500px] -translate-y-[calc(50%+150px)] xl:block"
-    xmlns="http://www.w3.org/2000/svg"
-    fill="none"
-    viewBox="0 0 856 455"
-  >
-    <path
-      stroke="url(#a)"
-      strokeWidth="5"
-      d="M1 3c131.171 34.71 6.928 179.105 112.697 292.955 105.768 113.85 252.181-12.033 417.531 103.206 165.35 115.238 228.627 0 323.772 39.801"
-    />
-    <defs>
-      <linearGradient
-        id="a"
-        x1="519.5"
-        x2="742.285"
-        y1="239.5"
-        y2="478.349"
-        gradientUnits="userSpaceOnUse"
-      >
-        <stop offset=".3" stopColor="#FF7E3E" />
-        <stop offset=".6" stopColor="#FA8E21" />
-        <stop offset=".9" stopColor="#fff" stopOpacity="0" />
-      </linearGradient>
-    </defs>
-  </svg>
-);
+// const TeamStructureDecoration = () => (
+//   <svg
+//     className="absolute top-1/2 hidden w-[500px] -translate-y-[calc(50%+150px)] xl:block"
+//     xmlns="http://www.w3.org/2000/svg"
+//     fill="none"
+//     viewBox="0 0 856 455"
+//   >
+//     <path
+//       stroke="url(#a)"
+//       strokeWidth="5"
+//       d="M1 3c131.171 34.71 6.928 179.105 112.697 292.955 105.768 113.85 252.181-12.033 417.531 103.206 165.35 115.238 228.627 0 323.772 39.801"
+//     />
+//     <defs>
+//       <linearGradient
+//         id="a"
+//         x1="519.5"
+//         x2="742.285"
+//         y1="239.5"
+//         y2="478.349"
+//         gradientUnits="userSpaceOnUse"
+//       >
+//         <stop offset=".3" stopColor="#FF7E3E" />
+//         <stop offset=".6" stopColor="#FA8E21" />
+//         <stop offset=".9" stopColor="#fff" stopOpacity="0" />
+//       </linearGradient>
+//     </defs>
+//   </svg>
+// );
 
 const teamsData = {
   mainTeam: [
@@ -156,7 +156,7 @@ const teamsData = {
       id: 6,
       name: "Citra Pratiwi",
       role: "Wakil Bendahara",
-      imageUrl: "/images/profile/citra.jpg",
+      imageUrl: "/images/profile/citra-pratiwi.jpg",
       socials: {
         instagram: {
           label: "Citra Pratiwi",

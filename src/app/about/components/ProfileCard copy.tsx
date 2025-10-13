@@ -20,7 +20,6 @@ interface ProfileCardProps {
 }
 
 const ProfileCard: React.FC<ProfileCardProps> = ({
-  id,
   name,
   role,
   imageUrl,

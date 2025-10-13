@@ -1,14 +1,5 @@
-saya mendapat eror hydration:
-  <body
-className="inter_fe8b9d92-module__LINzvG__variable font-inter relative flex min-h-screen f..."
--__processed_6b185889-96b8-4db5-80e3-95d0e4bbf27b__="true"
--bis_register="W3sibWFzdGVyIjp0cnVlLCJleHRlbnNpb25JZCI6ImVwcGlvY2VtaG1ubGJoanBsY2drb2ZjaWll..."
->
-
-berikut adalah kode saya:
-
-file: Events.tsx:
-import EventsWrapper from "./EventsWrapper";
+File: Events.tsx:
+import EventsWrapper from "./EventsSwiperWrapper";
 import SectionsButtonNavigator from "./SectionsButtonNavigator";
 
 const Events = () => {
@@ -32,7 +23,7 @@ const Events = () => {
           <SectionsButtonNavigator href="/events" isMobile={false} />
         </div>
 
-        <EventsWrapper></EventsWrapper>
+        <EventsWrapper />
 
         <SectionsButtonNavigator href="/events" isMobile={true} />
       </div>
@@ -42,39 +33,126 @@ const Events = () => {
 
 export default Events;
 
-file: EventsWrapper.tsx:
+File: EventsSwiperWrapper.tsx:
 "use client";
 
-import dynamic from "next/dynamic";
-
-// 👉 Dynamic import dilakukan DI SINI (client side)
-//    karena file ini sudah "use client"
-const EventsClient = dynamic(() => import("./EventsClient"), {
-  ssr: false,
-});
+import EventsSwiper from "./EventsSwiper";
 
 const EventsWrapper = () => {
-  return <EventsClient />;
+  return (
+    <div className="relative">
+      <button
+        aria-label="Previous Slide"
+        id="swiper--events__navigator--prev"
+        className="group absolute top-1/2 -left-2 z-20 -translate-y-1/2 cursor-pointer transition-transform duration-100 active:scale-90 md:-left-6"
+      >
+        <svg
+          className="drop-shadow-lg"
+          xmlns="http://www.w3.org/2000/svg"
+          width={48}
+          height={48}
+          fill="none"
+          viewBox="0 0 48 48"
+        >
+          <rect
+            className="fill-[#DCDCDC] transition-colors duration-100 group-hover:fill-[#FF7E3E] group-active:fill-[#FF7E3E]"
+            width={48}
+            height={48}
+            fill="#DCDCDC"
+            rx={24}
+            transform="matrix(1 0 0 -1 0 48)"
+          />
+          <path
+            className="stroke-[#989696] transition-colors duration-100 group-hover:stroke-[#fff] group-active:stroke-[#fff]"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={4}
+            d="M22 12 12 24m0 0 10 12M12 24h24"
+          />
+        </svg>
+      </button>
+
+      <EventsSwiper></EventsSwiper>
+
+      <button
+        aria-label="Next Slide"
+        id="swiper--events__navigator--next"
+        className="group absolute top-1/2 -right-2 z-20 -translate-y-1/2 cursor-pointer transition-transform duration-100 active:scale-90 md:-right-6"
+      >
+        <svg
+          className="drop-shadow-lg"
+          xmlns="http://www.w3.org/2000/svg"
+          width={48}
+          height={48}
+          fill="none"
+          viewBox="0 0 48 48"
+        >
+          <rect
+            className="fill-[#DCDCDC] transition-colors duration-100 group-hover:fill-[#FF7E3E] group-active:fill-[#FF7E3E]"
+            width={48}
+            height={48}
+            rx={24}
+            transform="matrix(-1 0 0 1 48 0)"
+          />
+          <path
+            className="stroke-[#989696] transition-colors duration-100 group-hover:stroke-[#fff] group-active:stroke-[#fff]"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={4}
+            d="m26 36 10-12m0 0L26 12m10 12H12"
+          />
+        </svg>
+      </button>
+    </div>
+  );
 };
 
 export default EventsWrapper;
 
-fike: EventsClient.tsx:
+
+File: EventsSwiper.tsx:
 "use client";
 
-import { useRef } from "react";
-import EventsSwiper from "./EventsSwiper";
+import events from "@/json/events";
 
-const EventsClient = () => {
-  const prevRef = useRef<HTMLButtonElement>(null);
-  const nextRef = useRef<HTMLButtonElement>(null);
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination, Autoplay } from "swiper/modules";
+
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+
+import EventCard from "./EventCard";
+
+const EventsSwiper = () => {
   return (
-    <div className="relative">
-      <button
-        ref={prevRef}
+    <Swiper
+      modules={[Navigation, Pagination, Autoplay]}
+      loop={true}
+      autoplay={{ delay: 3000, disableOnInteraction: false }}
+      slidesPerView={1}
+      spaceBetween={16}
+      navigation={{
+        prevEl: "#swiper--events__navigator--prev",
+        nextEl: "#swiper--events__navigator--next",
+      }}
+      pagination={{
+        el: ".swiper-pagination-events",
+        clickable: true,
+      }}
+      breakpoints={{
+        768: {
+          slidesPerView: 2,
+        },
+        1024: {
+          slidesPerView: 3,
+        },
+      }}
+    >
+      {/* <button
         aria-label="Previous Slide"
         id="swiper--events__navigator--prev"
-        className="group absolute top-1/2 -left-2 z-20 -translate-y-1/2 cursor-pointer transition-transform duration-100 active:scale-90 lg:-left-6"
+        className="group absolute top-1/2 -left-6 z-20 -translate-y-1/2 cursor-pointer transition-transform duration-100 active:scale-90"
       >
         <svg
           className="drop-shadow-lg"
@@ -100,15 +178,20 @@ const EventsClient = () => {
             d="M22 12 12 24m0 0 10 12M12 24h24"
           />
         </svg>
-      </button>
+      </button> */}
 
-      <EventsSwiper prevRef={prevRef} nextRef={nextRef} />
+      {events.map((event) => (
+        <SwiperSlide key={event.id}>
+          <EventCard event={event} />
+        </SwiperSlide>
+      ))}
 
-      <button
-        ref={nextRef}
+      <div className="swiper-pagination-events swiper-pagination" />
+
+      {/* <button
         aria-label="Next Slide"
         id="swiper--events__navigator--next"
-        className="group absolute top-1/2 -right-2 z-20 -translate-y-1/2 cursor-pointer transition-transform duration-100 active:scale-90 lg:-right-6"
+        className="group absolute top-1/2 -right-6 z-20 -translate-y-1/2 cursor-pointer transition-transform duration-100 active:scale-90"
       >
         <svg
           className="drop-shadow-lg"
@@ -133,81 +216,124 @@ const EventsClient = () => {
             d="m26 36 10-12m0 0L26 12m10 12H12"
           />
         </svg>
-      </button>
-    </div>
-  );
-};
-
-export default EventsClient;
-
-file: EventsSwiper.tsx:
-"use client";
-
-import { useEffect } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Swiper as SwiperClass } from "swiper";
-import { Navigation, Pagination, Autoplay } from "swiper/modules";
-import events from "@/json/events";
-import EventCard from "./EventCard";
-
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-
-interface EventsSwiperProps {
-  prevRef: React.RefObject<HTMLButtonElement | null>;
-  nextRef: React.RefObject<HTMLButtonElement | null>;
-}
-
-const EventsSwiper: React.FC<EventsSwiperProps> = ({ prevRef, nextRef }) => {
-  useEffect(() => {
-    // hanya debug log kalau ref belum siap
-    if (!prevRef.current || !nextRef.current) {
-      console.warn("Nav refs belum siap");
-    }
-  }, [prevRef, nextRef]);
-
-  return (
-    <Swiper
-      className="swiper-events"
-      modules={[Navigation, Pagination, Autoplay]}
-      loop
-      autoplay={{ delay: 3000, disableOnInteraction: false }}
-      slidesPerView={1}
-      spaceBetween={16}
-      pagination={{
-        el: ".swiper-pagination-events",
-        clickable: true,
-      }}
-      breakpoints={{
-        768: { slidesPerView: 2 },
-        1024: { slidesPerView: 3 },
-      }}
-      // ✅ onSwiper memberikan akses langsung ke instance swiper
-      onSwiper={(swiper: SwiperClass) => {
-        if (!prevRef.current || !nextRef.current) return;
-
-        if (
-          swiper.params.navigation &&
-          typeof swiper.params.navigation !== "boolean"
-        ) {
-          swiper.params.navigation.prevEl = prevRef.current;
-          swiper.params.navigation.nextEl = nextRef.current;
-          swiper.navigation.destroy();
-          swiper.navigation.init();
-          swiper.navigation.update();
-        }
-      }}
-    >
-      {events.map((event) => (
-        <SwiperSlide key={event.id}>
-          <EventCard event={event} />
-        </SwiperSlide>
-      ))}
-
-      <div className="swiper-pagination-events swiper-pagination" />
+      </button> */}
     </Swiper>
   );
 };
 
 export default EventsSwiper;
+
+File: EventsCard.tsx:
+import Image from "next/image";
+import { useState } from "react";
+
+import Skeleton from "react-loading-skeleton";
+import "react-loading-skeleton/dist/skeleton.css";
+
+interface EventCardProps {
+  event: {
+    id: number;
+    type: string;
+    img_path: string;
+    title: string;
+    description: string;
+  };
+}
+
+const EventCard: React.FC<EventCardProps> = ({
+  event: { type, img_path, title, description },
+}) => {
+  const [imageLoaded, setImageLoaded] = useState(false);
+
+  const showSkeleton = !imageLoaded;
+
+  return (
+    <a
+      href="#"
+      className="card__event group relative mx-auto block aspect-[2/3] w-[calc(100%-32px)] overflow-hidden rounded-lg shadow-xl md:w-full"
+    >
+      {showSkeleton && <Skeleton height="100%" width="100%"></Skeleton>}
+
+      <Image
+        width={300}
+        height={450}
+        loading="lazy"
+        className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-110"
+        src={img_path}
+        alt={title}
+        sizes="(min-width: 1279px) 3000px, 300px"
+        onLoadingComplete={() => setImageLoaded(true)}
+      />
+      <div className="absolute bottom-5 left-2.5 z-50 w-[calc(100%-20px)] lg:left-4 lg:w-[calc(100%-32px)] xl:w-[calc(100%-32px)] xl:p-4">
+        {showSkeleton ? (
+          <Skeleton width="40%" height={14}></Skeleton>
+        ) : (
+          <p className="max-w-max rounded-lg bg-[#D9D9D990] px-2 py-1 text-xs text-white uppercase">
+            {type}
+          </p>
+        )}
+
+        {showSkeleton ? (
+          <Skeleton width="100%" height={24}></Skeleton>
+        ) : (
+          <p className="mt-4 font-bold text-pretty text-white xl:text-3xl">
+            {title}
+          </p>
+        )}
+
+        <div className="flex items-end gap-x-2">
+          {showSkeleton ? (
+            <Skeleton width="100px" height="24px"></Skeleton>
+          ) : (
+            <p className="mt-1 text-sm text-balance text-white">
+              {description}
+            </p>
+          )}
+
+          {showSkeleton ? (
+            <Skeleton width="24px" height="24px"></Skeleton>
+          ) : (
+            <svg
+              className="h-6 w-6 shrink-0 md:h-11 md:w-11"
+              xmlns="http://www.w3.org/2000/svg"
+              width={44}
+              height={44}
+              fill="none"
+              viewBox="0 0 44 44"
+            >
+              <rect
+                width={43}
+                height={43}
+                fill="url(#a)"
+                rx="21.5"
+                transform="matrix(-1 0 0 1 43.555 .5)"
+              />
+              <path
+                stroke="#fff"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={4}
+                d="m23.638 30 7.917-8m0 0-7.917-8m7.917 8h-19"
+              />
+              <defs>
+                <linearGradient
+                  id="a"
+                  x1="21.5"
+                  x2="21.5"
+                  y1={0}
+                  y2={43}
+                  gradientUnits="userSpaceOnUse"
+                >
+                  <stop stopColor="#FF7E3E" />
+                  <stop offset={1} stopColor="#F49D03" />
+                </linearGradient>
+              </defs>
+            </svg>
+          )}
+        </div>
+      </div>
+    </a>
+  );
+};
+
+export default EventCard;

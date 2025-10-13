@@ -9,6 +9,7 @@ import {
   IconBrandLinkedin,
   IconWorld,
 } from "@tabler/icons-react";
+
 import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
 
@@ -23,11 +24,10 @@ interface ProfileCardProps {
     linkedIn: { label: string; url: string };
     portfolio: { label: string; url: string };
   };
-  isLoading?: boolean; // ✅ tambahkan prop opsional
+  isLoading?: boolean;
 }
 
 const ProfileCard: React.FC<ProfileCardProps> = ({
-  id,
   name,
   role,
   imageUrl,
@@ -51,7 +51,9 @@ const ProfileCard: React.FC<ProfileCardProps> = ({
             width={400}
             height={400}
             alt={name}
-            onLoadingComplete={() => setImageLoaded(true)}
+            onLoad={() => {
+              setImageLoaded(true);
+            }}
             className={`absolute top-0 left-0 h-full w-full object-cover transition-opacity duration-500 ${
               imageLoaded ? "opacity-100" : "opacity-0"
             }`}

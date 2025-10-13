@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
 import {
   IconBrandGithub,
   IconBrandInstagram,
@@ -20,7 +19,6 @@ interface ProfileCardProps {
 }
 
 const ProfileCard2: React.FC<ProfileCardProps> = ({
-  id,
   name,
   role,
   imageUrl,

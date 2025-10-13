@@ -12,7 +12,7 @@ interface ProjectCardProps {
 }
 
 const ProjectCard: React.FC<ProjectCardProps> = ({
-  project: { url, type, img_path, title, description },
+  project: { url, type, img_path, title },
 }) => {
   return (
     <a
