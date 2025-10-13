@@ -36,7 +36,7 @@ const teamsData = {
       id: 1,
       name: "Risky Firmansyah Manik",
       role: "Ketua",
-      imageUrl: "/images/profile/Risky-firmansyah-manik.jpg",
+      imageUrl: "/images/profile/risky-firmansyah-manik.jpg",
       socials: {
         instagram: {
           label: "Risky Firmansyah Manik",
