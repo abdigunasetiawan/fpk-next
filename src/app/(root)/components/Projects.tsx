@@ -1,4 +1,4 @@
-import ProjectsSwiper from "./ProjectsSwiper";
+import ProjectsSwiperWrapper from "./ProjectsSwiperWrapper";
 import SectionsButtonNavigator from "./SectionsButtonNavigator";
 
 const Projects = () => {
@@ -23,7 +23,7 @@ const Projects = () => {
           <SectionsButtonNavigator href="/projects" isMobile={false} />
         </div>
 
-        <ProjectsSwiper />
+        <ProjectsSwiperWrapper />
 
         <SectionsButtonNavigator href="/projects" isMobile={true} />
       </div>

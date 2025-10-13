@@ -62,13 +62,11 @@ const ContactForm = () => {
       )
       .then(
         () => {
-          console.log("SUCCESS!");
           setStatus("success");
           form.current.reset();
           setTimeout(() => setStatus(""), 3000);
         },
         (error) => {
-          console.log("FAILED...", error.text);
           setStatus("error");
           setTimeout(() => setStatus(""), 3000);
         },

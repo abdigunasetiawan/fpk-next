@@ -189,7 +189,7 @@ section#footer footer {
     content: url("/images/svg/mentor-decor-1.svg");
     right: 38px;
     top: 0;
-    z-index: 9999;
+    z-index: 999;
   }
   section#events .events-heading {
     position: relative;

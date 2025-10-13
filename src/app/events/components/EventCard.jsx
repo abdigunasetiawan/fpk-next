@@ -1,8 +1,6 @@
 import Image from "next/image";
 
 const EventCard = ({ event: { type, img_path, title, description } }) => {
-  console.log(event);
-
   return (
     <div className="card w-full md:w-80 lg:w-72 xl:w-[48%]">
       <div className="group overflow-hidden rounded-lg shadow-lg">
