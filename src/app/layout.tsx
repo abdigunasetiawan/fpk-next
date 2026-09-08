@@ -6,6 +6,7 @@ import { Analytics } from "@vercel/analytics/next";
 
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import MigrationModal from "@/components/MigrationModal";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -42,6 +43,7 @@ export default function RootLayout({
       <body
         className={`${inter.variable} font-inter relative flex min-h-screen flex-col overflow-x-hidden antialiased`}
       >
+        <MigrationModal />
         <Navbar />
         <LenisProvider>{children}</LenisProvider>
         <Analytics />
